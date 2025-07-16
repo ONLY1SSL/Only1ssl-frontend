@@ -1,4 +1,4 @@
-// src/components/Login.js
+// src/components/Login.jsx
 import axios from 'axios';
 import { useState } from 'react';
 
@@ -9,13 +9,13 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/auth/login`, {
+      const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/auth/login`, {
         email,
         password,
       });
 
       const { token, user } = res.data;
-      localStorage.setItem('token', token); // Save token for future use
+      localStorage.setItem('token', token);
       setMessage(`✅ Welcome, ${user.username}`);
     } catch (err) {
       console.error(err);
