@@ -1,0 +1,19 @@
+{
+  "name": "only1ssl-frontend",
+  "version": "1.0.0",
+  "homepage": "https://ONLY1SSL.github.io/only1ssl-frontend",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "react": "...",
+    "react-dom": "...",
+    "react-scripts": "..."
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
